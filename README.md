@@ -8,7 +8,7 @@
   <a href="https://github.com/zhaojinxiang/naive-json-parser"><img src="https://img.shields.io/github/license/zhaojinxiang/naive-json-parser.svg" alt="License"></a>
 </p>
 
-A simple and naïve json parser, wrote by TypeScript.
+A simple and naïve json parser, wroten by TypeScript.
 
 TODO:
 
