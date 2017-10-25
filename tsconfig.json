@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "module": "commonjs",
+    "target": "es2017",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "strict": true,
+    "pretty": true,
+    "experimentalDecorators":true, // 实验性的装饰器
+    "noImplicitAny": true
+  },
+  "lib": ["esnext", "dom","es2017"],
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}

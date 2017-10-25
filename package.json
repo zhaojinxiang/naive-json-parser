@@ -1,0 +1,26 @@
+{
+  "name": "naive-json",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "karma start"
+  },
+  "keywords": [
+    "json"
+  ],
+  "author": "zhaojinxiang",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/karma-jasmine": "0.0.29",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coveralls": "^1.1.2",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-typescript": "^3.0.8",
+    "tslint-config-airbnb": "^5.3.0",
+    "typescript": "^2.5.3"
+  }
+}
