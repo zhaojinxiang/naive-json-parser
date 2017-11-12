@@ -1,7 +1,7 @@
 
 
 import { peek, take, throwErr, hasNext } from './sideEff';
-function betweenO_9(c:string) {
+function between0_9(c:string) {
   const zeroPoint = <number> '0'.codePointAt(0);
   const cPoint = <number>c.codePointAt(0);
   const ninePoint = <number>'9'.codePointAt(0);
@@ -14,32 +14,28 @@ function between1_9(c:string) {
   return onePoint <= cPoint && cPoint <= ninePoint;
 }
 
+function isNumberChar(c:string) {
+  return c === 'e' || c === 'E' || c === '.' || c === '+' || c === '-' || between0_9(c);
+}
+
 export function nextIsNumber() {
-  return between1_9(peek());
-}
-export function numberParser() {
-  return intParser();
+  const next = peek();
+  return next === '-' || between0_9(next);
 }
 
-
-
-
-function intParserhelper(n:number):number {
+function getNumersString(s:string):string {
   if (!hasNext()) {
-    return n;
+    return s;
   }
   const next = peek();
-  if (!betweenO_9(next)) {
-    return n;
+  if (!isNumberChar(next)) {
+    return s;
   }
-  take();
-  return intParserhelper(n * 10 + Number(next));
+  return getNumersString(s + take());
 }
 
-function intParser() {
-  const first = take();
-  if (!between1_9(first)) {
-    throwErr(`illegal num ${first}`);
-  }
-  return intParserhelper(Number(first));
+export function numberParser() {
+  const s = getNumersString('');
+  return Number(s);
 }
+

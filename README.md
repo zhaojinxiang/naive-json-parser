@@ -10,6 +10,7 @@
 
 A simple and naïve json parser, wroten by TypeScript.
 
-TODO:
+A full implementation of the Standard ECMA-404 —— The JSON Data Interchange Format
 
-* numbers
+
+
